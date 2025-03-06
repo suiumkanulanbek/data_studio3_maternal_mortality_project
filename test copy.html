@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maternal Mortality</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-size: 20px;
+            font-family: 'Source Serif Pro', serif;
+            text-rendering: optimizeLegibility;
+            background-color: #FFF2F2;
+            overflow-x: hidden;
+        }
+
+        .scrolly-container {
+            width: 100%;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+
+        .content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .header {
+            padding: 3em 0 0;
+        }
+
+        .byline {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #145ac3;
+        }
+
+        figure {
+            margin: 0;
+            padding-bottom: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 3em;
+            line-height: 1.1;
+            margin-bottom: 0.5em;
+        }
+
+        iframe, img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 1em;
+        }
+
+        .content:not(.header) {
+            padding-top: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
+        /* AI2HTML Graphics */
+        #g-template-full, #g-template-mobile {
+            display: none;
+        }
+
+        @media (min-width: 700px) {
+            #g-template-full {
+                display: block;
+            }
+        }
+
+        @media (max-width: 699px) {
+            #g-template-mobile {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scrolly-container">
+        <div class="content header visible">
+            <h1>U.S. Maternal Mortality Rates Decline, but Challenges Still There</h1>
+            <p class="subhead">Mental Health Emerges as Leading Cause of Maternal Deaths in the US, Racial Gaps and Systemic Failures Growing</p>
+            <figure>
+                <img alt="mothers" src="maternal.jpg">
+            </figure>
+            <div class="byline">
+                <p>By <a href="https://suiumkanulanbek.github.io/suiumkanulanbek1/">Suiumkan Ulanbek</a></p>
+            </div>
+        </div>
+
+        <div class="content visible">
+            <p>The United States has been facing a serious problem with maternal health, as it has one of the highest rates of maternal
+                deaths among wealthy countries. According to recent data from the Centers for Disease Control and Prevention (CDC), 
+                there were 18.6 deaths per 100,000 live births in 2023. While this number has decreased from 22.3 deaths per 100,000 in 2022, 
+                it still puts the U.S. in a troubling position compared to other high-income nations.</p>
+
+            <p>Recent data shows a decline in maternal death rates in the U.S., but <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10434867/">the COVID-19 pandemic 
+                has reshaped the risks</a> mothers face.</p>
+                  
+            <p>In 2020, mental health conditions became the leading cause of maternal deaths,
+                replacing cardiovascular issues and hemorrhage, which were the top causes before the pandemic. 
+                This shift has been significant, with nearly one in four maternal deaths linked to mental health struggles.</p>
+        </div>
+
+        <div class="content">
+            <!-- AI2HTML Graphic -->
+            <div id="g-template-full">
+                <img id="g-template-full-img" class="g-template-full-img" alt="Full version" src="template-full.jpg"/>
+            </div>
+
+            <div id="g-template-mobile">
+                <img id="g-template-mobile-img" class="g-template-mobile-img" alt="Mobile version" src="template-mobile.jpg"/>
+            </div>
+        </div>
+
+        <div class="content">
+            <p>The CDC defines mental health-related maternal deaths broadly, including suicides, overdoses, 
+                and poisonings tied to substance use disorders.</p>
+            <p>Tragically, about 83.5% of maternal deaths were preventable. 
+                In a country like the U.S., which spends billions on healthcare, this highlights serious gaps in the system.</p> 
+        </div>
+
+        <div class="content">
+            <figure>
+                <img src="mat2.png" alt="Chart" width="700" height="700">
+            </figure>
+        </div>
+
+        <div class="content">
+            <p>Black women are disproportionately affected, facing a much higher risk of 
+                maternal death. In 2023, their mortality rate was 50.3 deaths per 100,000 
+                live births—more than three times that of White women.</p>
+
+            <p>Harvard health policy expert Alecia McGregor warns that, along with healthcare 
+                disparities affecting women of color, many hospitals are shutting down obstetric 
+                units across the U.S.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            let contents = document.querySelectorAll(".content");
+            contents.forEach(content => {
+                let position = content.getBoundingClientRect().top;
+                if (position < window.innerHeight * 0.8) {
+                    content.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
