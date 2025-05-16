@@ -33,7 +33,7 @@ This project includes expert insight from:
 * Mobile-responsive data visualizations
 * Integration of expert interviews and external reporting
 
-## Visual Assets
+## Visual Elements
 
 * **Illustrative photo** used in the project is by **Jozemara Friorili Lemes**, sourced from [Pexels](https://www.pexels.com/).
 * All static charts and graphics were made in DataWrapper and edited in Adobe Illustrator. Responsive versions were generated using **ai2html** for mobile compatibility.
